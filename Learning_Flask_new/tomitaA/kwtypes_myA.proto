@@ -1,6 +1,0 @@
-import "base.proto";
-import "articles_base.proto";
-
-message action : TAuxDicArticle {}
-message member : TAuxDicArticle {}
-message startend : TAuxDicArticle {}

@@ -1,5 +1,0 @@
-import "base.proto";
-import "articles_base.proto";
-
-message full_family : TAuxDicArticle {}
-message marry : TAuxDicArticle {}
