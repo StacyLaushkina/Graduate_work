@@ -1,0 +1,93 @@
+{% extends "tmp.html" %}
+{% block body %}
+	<div id="page_align" class="b3radius">
+		<div id="header">
+			<div id="header_nav">
+				<ul>
+					<li><a href="{{ url_for('index') }}">Main</a></li>
+					<li><a href="{{ url_for('parse') }}">Search in text</a></li>
+                    <li><a href="{{ url_for('tomita') }}">Tomita parser</a></li>
+					<li><a href="{{ url_for('other') }}">Other</a></li>
+					<li><a href="{{ url_for('developer_information') }}">Developer Information</a></li>
+				</ul>
+				<form method="" action="">
+					<input type="text" name="topsearch" placeholder="Search" class="b3radius">
+				</form>
+			</div>
+    	</div>
+
+		<div id="content">
+            <font size="3" font style="font-family:Monotype Corsiva;">
+                <form action = "/" method = "post" >
+                    <table cellspacing="50" width="100%">
+                        <tr>
+                            <td>
+                                Do you want start searching?
+                                <br> Enter text (on english):
+                                    <br> <textarea name = "expression" rows = "10" cols = "45"></textarea>
+
+                                <br> Word for search:
+                                    <br> <input type = "text" name = "search" />
+
+                                <br> And tag for search(not obligatorily) <br>
+                                    <select name = "search_word_tag">
+                                        <option value='NULL'>null</option>
+                                        <option value='TIME'>TIME</option>
+                                        <option value='LOCATION'>LOCATION</option>
+                                        <option value='ORGANIZATION'>ORGANIZATION</option>
+                                        <option value='PERSON'>PERSON</option>
+                                        <option value='MONEY'>MONEY</option>
+                                        <option value='PERCENT'>PERCENT</option>
+                                        <option value='DATE'>DATE</option>
+                                    </select>
+                            </td>
+                            <td>
+                                Do you want to add a new word?
+                                <br> Enter word for adding:
+                                    <br> <input type = "text" name = "new_word" />
+
+                                <br> And its tag: <br>
+                                    <select name = "new_word_tag">
+                                        <option value='TIME'>TIME</option>
+                                        <option value='LOCATION'>LOCATION</option>
+                                        <option value='ORGANIZATION'>ORGANIZATION</option>
+                                        <option value='PERSON'>PERSON</option>
+                                        <option value='MONEY'>MONEY</option>
+                                        <option value='PERCENT'>PERCENT</option>
+                                        <option value='DATE'>DATE</option>
+                                    </select>
+                            </td>
+                            <td>
+                                Do you want look at your library? <br>
+                                    <input type="radio" name="LookAt" value="FALSE" checked> No <br>
+                                    <input type="radio" name="LookAt" value="TRUE" > Yes <br>
+                                    <br><br>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type = 'hidden' name = "tomita_expression" value = "null_value">
+                    <p align="center"> <input type = "submit" value = "  Execute  " /> </p>
+                </form>
+
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <br><hr><br>
+                        <center><b> Result:</b></center>
+                        <br>
+                        <div class="flashes" style="width:800px; padding:0px 0px 100px 100px">
+                            {% for message in get_flashed_messages() %}
+                                <br> {{ message }} <br>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+            </font>
+        </div>
+
+        <font size="2" font style="font-family:Monotype Corsiva;">
+                <p align="right"> Novosibirsk, 2014 </p>
+        </font>
+    </div>
+{% endblock %}
+

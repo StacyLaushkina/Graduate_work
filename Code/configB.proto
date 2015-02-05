@@ -1,0 +1,27 @@
+encoding "utf8";
+
+TTextMinerConfig {
+
+  Dictionary = "tomitaB/dicB.gzt";
+
+  Input =  {
+    File = "input.txt";
+    Type = dpl;
+            }
+
+  Articles = [
+    {   Name = "БазовыйФакт"
+    }
+            ]
+
+  Facts = [
+    {   Name = "BasicFact"
+
+    }
+          ]
+  //PrettyOutput = "debug.html";
+  Output = {
+    File = "facts.txt";
+    Format = text;
+            }
+}

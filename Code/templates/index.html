@@ -1,0 +1,67 @@
+{% extends "tmp.html" %}
+{% block body %}
+	<div id="page_align" class="b3radius">
+		<div id="header">
+			<div id="header_nav">
+				<ul>
+					<li><a href="{{ url_for('index') }}">Main</a></li>
+					<li><a href="{{ url_for('parse') }}">Search in text</a></li>
+                    <li><a href="{{ url_for('tomita') }}">Tomita parser</a></li>
+					<li><a href="{{ url_for('other') }}">Other</a></li>
+					<li><a href="{{ url_for('developer_information') }}">Developer Information</a></li>
+				</ul>
+				<form method="" action="">
+					<input type="text" name="topsearch" placeholder="Search" class="b3radius">
+				</form>
+			</div>
+
+		</div>
+		<div id="content">
+            <font size="3" font style="font-family:Monotype Corsiva;">
+                <div style="width:800px; padding:50px 0px 100px 100px">
+
+                    <p  style="text-indent: 40px;">
+                        Hello and Welcome! If you are tyred from endless searching for an information from vast texts, you came to the right!
+                        Here, on the Word Parsing, you can quickly found all necessary information about some person or you can filter the text
+                        by choosing from it only valuable sentences.
+                    </p>
+
+                    <p  style="text-indent: 40px;">
+                        Go to the 'Search in text' inset and you'll have opportunity to choose the sentences from the written on english text, which necessary contains words.
+                        In this way these sentences guaranteed will be valuable, because they will contain words from Stanford dictionaries or from your own one, which you can
+                        easily create and modify.
+                    </p>
+
+                    <p  style="text-indent: 40px;">
+                        If you are lucky enough to know russian, you can go to the 'Tomita parser' inset, where you can choose sentences of certain category
+                        from writen on russian text.
+                        <br>'Basic facts' are facts about birthday, death, parenthood or living in different places.
+                        <br>'Family facts' are facts about marriage or ones about mothers, fathers, sisters, uncles etc.
+                        <br>'Live facts' are facts about life. Like person's participating in some actions, membership in an organizations and etc.
+                    </p>
+                    <br><hr><br>
+                    <p style="text-indent: 40px;">
+                        Добро пожаловать! Если вам надоело часами высматривать нужную информацию из больших текстов, то вы обратились по адресу!
+                        Здесь, на Word Parsing, вы можете быстро найти информацию о интересующем вас человеке или же отфильровать текст, выбрав из него только значимые предложения.
+                    </p>
+                    <p style="text-indent: 40px;">
+                        Зайдя на вкладку 'Search in text', вам предоставился возможность выбрать из английского текста предложения, содержащие слова, которое вам необходимы,
+                        при этом предложения в результирующем наборе будут гарантированно иметь весомый смысл - они будут содержать
+                        слова, содержащиеся в словарях Stanford или же в вашей собственнй библиотеке, которую вы можете создавать и редактировать.
+                    </p>
+                    <p style="text-indent: 40px;">
+                        На другой вкладке, 'Tomita parser', вам предоставляется возможность выбрать из русского текста предложения определенной категории.
+                        <br>'Basic facts' это факты о рождении, смерти, отцовстве и проживании в тех или иных местах.
+                        <br>'Family facts' - о замужестве или фактах, касаемо матери, сестры, свекрови и проч.
+                        <br>'Live facts' - факты о жизни. О участии человека в меропрятиях, членстве в организациях, его отношение к тем или иным выступлениям.
+                    </p>
+                </div>
+            </font>
+
+            <font size="2" font style="font-family:Monotype Corsiva;">
+                <p align="right">Novosibirsk, 2014</p>
+            </font>
+
+  	    </div>
+    </div>
+{% endblock %}
