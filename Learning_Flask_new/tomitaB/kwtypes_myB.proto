@@ -1,0 +1,7 @@
+import "base.proto";
+import "articles_base.proto";
+
+message born : TAuxDicArticle {}
+message dead : TAuxDicArticle {}
+message live : TAuxDicArticle {}
+message family : TAuxDicArticle {}

@@ -1,0 +1,68 @@
+{% extends "tmp.html" %}
+{% block body %}
+	<div id="page_align" class="b3radius">
+		<div id="header">
+			<div id="header_nav">
+				<ul>
+					<li><a href="{{ url_for('index') }}">Main</a></li>
+					<li><a href="{{ url_for('parse') }}">Search in text</a></li>
+                    <li><a href="{{ url_for('tomita') }}">Tomita parser</a></li>
+					<li><a href="{{ url_for('other') }}">Other</a></li>
+					<li><a href="{{ url_for('developer_information') }}">Developer Information</a></li>
+				</ul>
+				<form method="" action="">
+					<input type="text" name="topsearch" placeholder="Search" class="b3radius">
+				</form>
+			</div>
+		</div>
+		<div id="content">
+            <font size="3" font style="font-family:Monotype Corsiva;">
+                <form action = "/" method = "post" >
+                    <table cellspacing="50" width="100%">
+                        <tr>
+                            <td>
+                                Do you want start searching?
+                                <br> Enter text (on russian)<br>
+                                    <textarea name = "tomita_expression" rows = "10" cols = "45"></textarea>
+                                <br> And sphere for search <br>
+                                    Basic facts:
+                                    <input type="radio" name="tomita_sphere_Bas" value="FALSE" > No
+                                    <input type="radio" name="tomita_sphere_Bas" value="TRUE" checked> Yes <br>
+                                    Facts about family:
+                                    <input type="radio" name="tomita_sphere_Fam" value="FALSE" > No
+                                    <input type="radio" name="tomita_sphere_Fam" value="TRUE" checked> Yes <br>
+                                    Facts about live:
+                                    <input type="radio" name="tomita_sphere_Liv" value="FALSE" > No
+                                    <input type="radio" name="tomita_sphere_Liv" value="TRUE" checked> Yes <br>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type = 'hidden' name = "LookAt" value = "null_value">
+                    <input type = 'hidden' name = "new_word_tag" value = "null_value">
+                    <input type = 'hidden' name = "new_word" value = "null_value">
+                    <input type = 'hidden' name = "search_word_tag" value = "null_value">
+                    <input type = 'hidden' name = "search" value = "null_value">
+                    <input type = 'hidden' name = "expression" value = "null_value">
+                    <p align="center"> <input type = "submit" value = "  Execute  "/> </p>
+                </form>
+
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <br><hr>
+                        <center><b> Result: </b></center>
+                        <div class="flashes" style="width:800px; padding:0px 0px 100px 100px">
+                            {% for message in get_flashed_messages() %}
+                            <br> {{ message }} <br>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+            </font>
+  	    </div>
+
+        <font size="2" font style="font-family:Monotype Corsiva;">
+                <p align="right"> Novosibirsk, 2014 </p>
+        </font>
+        </div>
+{% endblock %}

@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+body {
+	background: #eaeaea;
+
+}
+
+* {
+	text-decoration: none;
+}
+
+.b3radius {
+	border-radius: 3px;
+}
+
+#page_align {
+	width: 1000px;
+	margin: 35px auto;
+	background: #fff;
+	box-shadow: 0px 1px 3px #dddddd;
+	overflow: hidden;
+}
+
+#header {
+	height: 95px;
+	border-bottom: solid 3px #C7D4E1;
+	background: #fff;
+}
+
+#header_nav {
+	height: 35px;
+	border-bottom: solid 1px #f1f1f1;
+}
+
+#header_nav ul {
+	list-style: none;
+}
+
+#header_nav ul li {
+	float: left;
+	border-right: solid 1px #f1f1f1;
+}
+
+#header_nav ul li:last-child {
+	border-right: none;
+}
+
+#header_nav ul li a {
+	color: #868686;
+	display: block;
+	line-height: 35px;
+	padding: 0 7px;
+}
+
+#header_nav ul li a:hover {
+	background: rgba(0,0,0,0.1);
+}
+
+input[name=topsearch] {
+	float: right;
+	margin-right: 30px;
+	height: 25px;
+	width: 145px;
+	margin-top: 5px;
+	border: none;
+	box-shadow: inset 0px 1px 3px rgba(0,0,0,.1);
+	background: #f0f0f0;
+	padding: 0 5px;
+	margin: 0 auto
+}
+
+
+
+.clr {
+	clear: both;
+}
